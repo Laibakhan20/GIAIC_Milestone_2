@@ -6,7 +6,7 @@ import React from 'react'
          <section className="contact-header">
         <h1>Contact Me</h1>
         <p>
-          If you have any questions, feel free to reach out. I'll get back to you as soon as possible!
+          If you have any questions, feel free to reach out. I will get back to you as soon as possible!
         </p>
       </section>
 

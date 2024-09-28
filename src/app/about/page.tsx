@@ -6,7 +6,7 @@ import React from 'react'
       <section className="about-header">
         <h1>About Me</h1>
         <p>
-          Hi, I'm Laiba Khan, a web developer with a passion for creating beautiful and functional websites.
+          Hi, I am Laiba Khan, a web developer with a passion for creating beautiful and functional websites.
         </p>
       </section>
 
