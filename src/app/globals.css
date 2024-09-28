@@ -2,26 +2,281 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+  /* Box model adjustments */
+  * {
+    box-sizing: border-box;            /* Include padding and border in element width and height */
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  /* Reset some default margins and paddings */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;  /* A clean, readable font */
+    line-height: 1.6;                  /* Adjust line height for better readability */
+    background-color: #051a31;         /* background color */
+    color: #f7f1f1;                       /* text color */
+    box-sizing: border-box;             /* Include padding and borders in element width and height */
   }
+  
+
+  header {
+    background-color: #272222;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;  /* Dark background */
+    padding: 10px 20px;      /* Padding for spacing */
+    position: sticky;        /* Keeps the navbar sticky */
+    top: 0;                  /* Sticks to the top of the page */
+    z-index: 1000;           /* Ensures navbar stays on top */
+  }
+
+  /* Styling for the logo */
+  .navbar .logo { 
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase logo text */
+  }
+  
+  /* Remove default list styling for the nav links */
+  .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+     /* Each individual nav item */
+  .nav-links li {
+    margin-left: 20px;
+  }
+
+  /* Styling for the nav links */
+  .nav-links a {
+    color: white;              /* White text color */
+    text-decoration: none;     /* Remove underline */
+    font-size: 16px;
+    transition: color 0.3s ease;  /* Smooth transition for hover effect */
+  }
+  
+  /* Hover effect on nav links */
+  .nav-links a:hover {
+    color: #f39c12;  /* Orange color on hover */
+  }
+
+  /* Responsive navigation (for smaller screens) */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  }
+
+
+
+  /* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
+
+.hero-content {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #0070f3;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005bb5;
+}
+
+/* About Header Section */
+.about-header {
+  background-color: #051a31;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* About Content Section */
+.about-content {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.about-text {
+  margin-bottom: 50px;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.about-text p {
+  font-size: 18px;
+  color: white;
+  line-height: 1.6;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin: 10px 0;
+  border-left: 5px solid #0070f3;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Contact Header Section */
+.contact-header {
+  background-color: #051a31;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  background-color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Submit Button */
+.btn {
+  background-color: #0070f3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005bb5;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+  
+  
+  
+  
+  
+  
+ 

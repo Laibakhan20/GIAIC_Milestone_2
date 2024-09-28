@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Home from "./page";
+import About from "./about/page";
+import Contact from "./contact/page";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +31,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+         <header>
+          <nav className="navbar">
+            <div className="logo">LK.</div>
+            <ul className="nav-links">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+      
         {children}
+        <footer>&copy; 2024 LK. All rights reserved.</footer>
       </body>
     </html>
   );
